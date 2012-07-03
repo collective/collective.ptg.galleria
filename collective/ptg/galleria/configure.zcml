@@ -1,0 +1,28 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="collective.ptg.galleria">
+
+    <browser:resourceDirectory
+        name="ptg.galleria"
+        directory="resources"
+        />
+
+    <adapter
+        for="collective.plonetruegallery.interfaces.IGallery"
+        provides=".IGalleriaDisplaySettings"
+        factory=".GalleriaSettings" />
+
+    <browser:page
+        for="collective.plonetruegallery.interfaces.IGallery"
+        name="galleryview-galleria"
+        class=".GalleriaDisplayType"
+        template="galleria.pt"
+        permission="zope2.View" />
+
+    <utility
+        component=".GalleriaDisplayType"
+        provides="collective.plonetruegallery.interfaces.IDisplayType"
+        name="galleryview-galleria" />
+
+</configure>
