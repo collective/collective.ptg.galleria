@@ -6,7 +6,7 @@ version = '1.0'
 setup(name='collective.ptg.galleria',
       version=version,
       description="galleria integration with plonetruegallery",
-      long_description=open("README.txt").read() + "\n" +
+      long_description=open("README.rst").read() + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
       # Get more strings from
       # http://pypi.python.org/pypi?%3Aaction=list_classifiers
