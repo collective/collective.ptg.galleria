@@ -35,7 +35,7 @@ Galleria.addTheme({
         $('.galleria-info-link').html("Show info");
 
 
-        $(this._target).parent().append('<a href="#" class="play" id="galleria-player" />');
+        $(this._target).append('<a href="#" class="play" id="galleria-player" />');
         var player = $('#galleria-player');
         if(this._options.autoplay === false){
             player.addClass('play');

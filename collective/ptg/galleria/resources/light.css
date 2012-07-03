@@ -62,7 +62,7 @@
     right: 10px;
     z-index: 2;
     display: none;
-    background: url(++resource++collective.galleria/classic-loader.gif) no-repeat 2px 2px;
+    background: url(++resource++ptg.galleria/images/classic-loader.gif) no-repeat 2px 2px;
 }
 .galleria-info {
     position: absolute;
@@ -219,7 +219,7 @@
 .galleria-info-close,
 .galleria-image-nav-left,
 .galleria-image-nav-right {
-    background-image: url(++resource++collective.galleria/classic-map.png);
+    background-image: url(++resource++ptg.galleria/images/classic-map.png);
     background-repeat: no-repeat;
 }
 
@@ -241,28 +241,24 @@
     float: right;
     margin: 74px 15px 0 0;
     border: none;
+    z-index: 11;
 }
 
 #galleria-player.play{
-    background: url(++resource++plonetruegallery.resources/galleria/btn-mc-controls1.png) no-repeat 0px -38px;
+    background: url(++resource++ptg.galleria/images/btn-mc-controls1.png) no-repeat 0px -38px;
     z-index: 9;
 }
 
 #galleria-player.play:hover{
-    background: url(++resource++plonetruegallery.resources/galleria/btn-mc-controls1.png) no-repeat -38px -38px;
+    background: url(++resource++ptg.galleria/images/btn-mc-controls1.png) no-repeat -38px -38px;
 }
 
 #content #galleria-player.pause{
-    background: url(++resource++plonetruegallery.resources/galleria/btn-mc-controls1.png) no-repeat 0px 0px;
-    position: relative;
-    display: block;
-    bottom: 132px;
-    right: 10px;
-    margin:  0;
+    background: url(++resource++ptg.galleria/images/btn-mc-controls1.png) no-repeat 0px 0px;
 }
 
 #galleria-player.pause:hover{
-    background: url(++resource++plonetruegallery.resources/galleria/btn-mc-controls1.png) no-repeat -38px 0px;
+    background: url(++resource++ptg.galleria/images/btn-mc-controls1.png) no-repeat -38px 0px;
 }
 
 div.galleria-image-nav-left, div.galleria-image-nav-right{
