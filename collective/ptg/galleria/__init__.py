@@ -1,11 +1,12 @@
+from zope.i18nmessageid import MessageFactory
 from collective.plonetruegallery.utils import createSettingsFactory
 from zope.schema.vocabulary import SimpleVocabulary, SimpleTerm
-from collective.plonetruegallery import PTGMessageFactory as _
 from collective.plonetruegallery.browser.views.display import BaseDisplayType
 from collective.plonetruegallery.browser.views.display import jsbool
 from collective.plonetruegallery.interfaces import IBaseSettings
 from zope import schema
 
+_ = MessageFactory('collective.ptg.galleria')
 
 class IGalleriaDisplaySettings(IBaseSettings):
     galleria_theme = schema.Choice(

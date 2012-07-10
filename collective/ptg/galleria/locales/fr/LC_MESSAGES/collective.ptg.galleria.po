@@ -1,0 +1,82 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2012-07-10 13:07+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: fr\n"
+"Language-Name: French\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: collective.plonetruegallery\n"
+
+#. Default: "start gallery out with info showing"
+#: ./__init__.py:42
+msgid "galleria_desc_auto_show_info"
+msgstr ""
+
+#. Default: "Auto show info"
+#: ./__init__.py:41
+msgid "galleria_label_auto_show_info"
+msgstr ""
+
+#. Default: "Theme"
+#: ./__init__.py:13
+msgid "galleria_theme_title"
+msgstr ""
+
+#. Default: "Transition"
+#: ./__init__.py:22
+msgid "galleria_transition"
+msgstr ""
+
+#. Default: "Classic"
+#: ./__init__.py:18
+msgid "label_classic"
+msgstr ""
+
+#. Default: "Dark"
+#: ./__init__.py:16
+msgid "label_dark"
+msgstr ""
+
+#. Default: "Fade - crossfade betweens images"
+#: ./__init__.py:28
+#, fuzzy
+msgid "label_fade"
+msgstr "Fanez-vous"
+
+#. Default: "Fade Slide - fade between images and slide slightly at the same time"
+#: ./__init__.py:25
+msgid "label_fadeslide"
+msgstr ""
+
+#. Default: "Flash - fades into background color between images"
+#: ./__init__.py:30
+msgid "label_flash"
+msgstr ""
+
+#. Default: "Galleria"
+#: ./__init__.py:51
+msgid "label_galleria_display_type"
+msgstr ""
+
+#. Default: "Light"
+#: ./__init__.py:17
+msgid "label_light"
+msgstr ""
+
+#. Default: "Pulse - quickly removes the image into background color, then fades the next image"
+#: ./__init__.py:33
+msgid "label_pulse"
+msgstr ""
+
+#. Default: "Slide - slides the images depending on image position"
+#: ./__init__.py:36
+msgid "label_slide"
+msgstr ""
+
