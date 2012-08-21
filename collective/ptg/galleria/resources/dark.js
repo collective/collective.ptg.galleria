@@ -5,7 +5,7 @@
  * Copyright (c) 2011, Aino
  * Licensed under the MIT license.
  */
- 
+
 /*global jQuery, Galleria */
 
 (function($) {
@@ -17,17 +17,17 @@ Galleria.addTheme({
         transition: 'fadeslide',
         thumbCrop:  'height',
         showInfo: true,
-		// set this to false if you want to show the caption all the time:
+                // set this to false if you want to show the caption all the time:
         _toggleInfo: true
     },
     init: function(options) {
-        
+
         // add some elements
         this.addElement('info-link','info-close');
         this.append({
             'info' : ['info-link','info-close']
         });
-        
+
         // cache some stuff
         var info = this.$('info-link,info-close,info-text'),
             touch = Galleria.TOUCH,
@@ -35,8 +35,9 @@ Galleria.addTheme({
         $('.galleria-info-link').html("Show info");
 
 
-        $(this._target).append('<a href="#" class="play" id="galleria-player" />');
+        $(this._target).append('<a href="#" id="galleria-player" />');
         var player = $('#galleria-player');
+        player.css('z-index', '99999');
         if(this._options.autoplay === false){
             player.addClass('play');
         }else{
@@ -45,11 +46,12 @@ Galleria.addTheme({
 
         var galleria = this;
         player.bind(click, function(){
-            galleria.playToggle();
             if(player.hasClass('pause')){
+                galleria.pause();
                 player.removeClass('pause');
                 player.addClass('play');
             }else{
+                galleria.play();
                 player.removeClass('play');
                 player.addClass('pause');
             }
@@ -60,7 +62,7 @@ Galleria.addTheme({
             player.removeClass('pause');
             player.addClass('play');
         });
-        
+
         // show loader & counter with opacity
         this.$('loader,counter').show().css('opacity', 0.4);
 
@@ -70,17 +72,17 @@ Galleria.addTheme({
             this.addIdleState( this.get('image-nav-right'), { right:-50 });
             this.addIdleState( this.get('counter'), { opacity:0 });
         }
-        
+
         // toggle info
         if ( options._toggleInfo === true ) {
             info.bind( click, function() {
                 info.toggle();
             });
         } else {
-			info.show();
-			this.$('info-link, info-close').hide();
-		}
-        
+                        info.show();
+                        this.$('info-link, info-close').hide();
+                }
+
         if(options.showInfo){
             //start gallery with info showing
             info.toggle();
@@ -88,7 +90,7 @@ Galleria.addTheme({
 
         // bind some stuff
         this.bind('thumbnail', function(e) {
-            
+
             if (! touch ) {
                 // fade thumbnails
                 $(e.thumbTarget).css('opacity', 0.6).parent().hover(function() {
@@ -96,7 +98,7 @@ Galleria.addTheme({
                 }, function() {
                     $(this).not('.active').children().stop().fadeTo(400, 0.6);
                 });
-                
+
                 if ( e.index === options.show ) {
                     $(e.thumbTarget).css('opacity',1);
                 }
@@ -104,17 +106,17 @@ Galleria.addTheme({
                 $(e.thumbTarget).css('opacity', e.index == options.show ? 1 : 0.6);
             }
         });
-        
+
         this.bind('loadstart', function(e) {
             if (!e.cached) {
                 this.$('loader').show().fadeTo(200, 0.4);
             }
-            
+
             this.$('info').toggle( this.hasInfo() );
-            
+
             $(e.thumbTarget).css('opacity',1).parent().siblings().children().css('opacity', 0.6);
         });
-        
+
         this.bind('loadfinish', function(e) {
             this.$('loader').fadeOut(200);
         });
