@@ -88,6 +88,11 @@
     margin: 0;
     color: #bbb;
 }
+.galleria-info-copyright {
+    font: 10px/1.4 georgia,sans-serif;
+    margin: 0;   
+    color: #aaa;
+}
 .galleria-info-close {
     width: 9px;
     height: 9px;
