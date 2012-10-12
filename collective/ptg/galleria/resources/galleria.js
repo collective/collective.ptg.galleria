@@ -1022,7 +1022,7 @@ Galleria = function() {
 
     // add some elements
     var divs =  'container stage images image-nav image-nav-left image-nav-right ' +
-                'info info-text info-title info-description ' +
+                'info info-text info-title info-description info-copyright ' +
                 'thumbnails thumbnails-list thumbnails-container thumb-nav-left thumb-nav-right ' +
                 'loader counter tooltip',
         spans = 'current total';
@@ -2271,7 +2271,7 @@ Galleria.prototype = {
         // build the gallery frame
         this.append({
             'info-text' :
-                ['info-title', 'info-description'],
+                ['info-title', 'info-description', 'info-copyright'],
             'info' :
                 ['info-text'],
             'image-nav' :
@@ -2911,6 +2911,7 @@ Galleria.prototype = {
                 image:       img.attr('src'),
                 big:         img.attr('src'),
                 description: img.attr('alt') || '',
+                copyright:   (img.attr('copy')) ? '&copy;' + img.attr('copy') : '',
                 link:        img.attr('longdesc'),
                 original:    img.get(0) // saved as a reference
 
@@ -4229,7 +4230,7 @@ this.prependChild( 'info', 'myElement' );
         var self = this,
             data = this.getData( index );
 
-        $.each( ['title','description'], function( i, type ) {
+        $.each( ['title','description','copyright'], function( i, type ) {
 
             var elem = self.$( 'info-' + type );
 
@@ -4254,7 +4255,7 @@ this.prependChild( 'info', 'myElement' );
 
     hasInfo : function( index ) {
 
-        var check = 'title description'.split(' '),
+        var check = 'title description copyright'.split(' '),
             i;
 
         for ( i = 0; check[i]; i++ ) {
