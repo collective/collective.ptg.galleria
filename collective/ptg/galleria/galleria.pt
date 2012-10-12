@@ -6,6 +6,7 @@
                  src=""
                  tal:attributes="title img/title;
                                  alt img/description;
+                                 copy img/copyright;
                                  src img/thumb_url" />
         </a>
     </tal:images>
