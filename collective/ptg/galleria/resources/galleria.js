@@ -4794,8 +4794,13 @@ Galleria.Picture.prototype = {
                                 if ( img.width && img.height ) {
                                     complete.call( img );
                                 } else {
-                                    Galleria.raise('Could not extract width/height from image: ' + img.src +
-                                        '. Traced measures: width:' + img.width + 'px, height: ' + img.height + 'px.');
+                                    try { 
+                                        $('<img/>').attr('src', $(img).attr("src")).load(function(){
+                                            complete.call(this)});
+                                    } catch(error_message){
+                                        Galleria.raise('Could not extract width/height from image: ' + img.src + 
+                                                       '. Traced measures: width:' + img.width + 'px, height: ' + img.height + 'px.'); 
+                                    }
                                 }
                             };
                         }( this )), 2);

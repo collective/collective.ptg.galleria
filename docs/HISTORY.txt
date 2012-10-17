@@ -1,6 +1,13 @@
 Changelog
 =========
 
+1.2b1 (2012-10-17)
+------------------
+
+- try to fix weird image loading bug some are reporting.
+  [vangheem]
+
+
 1.1 (2012-10-12)
 ----------------
 
