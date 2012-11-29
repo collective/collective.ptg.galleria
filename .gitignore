@@ -1,0 +1,16 @@
+
+collective.ptg.galleria.egg-info
+
+*.pyc
+
+*.zip
+
+collective/.DS_Store
+
+collective/ptg/.DS_Store
+
+collective/ptg/galleria/.DS_Store
+
+.DS_Store
+
+*.mo
