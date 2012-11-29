@@ -7,10 +7,9 @@
                  tal:attributes="title img/title;
                                  alt img/description;
                                  copy img/copyright|string:;
-                                 src img/thumb_url" />
+                                 src img/thumb_url"/>
         </a>
     </tal:images>
 </div>
-
 
 

@@ -42,8 +42,12 @@ class IGalleriaDisplaySettings(IBaseSettings):
         description=_(u'galleria_desc_auto_show_info',
             default="start gallery out with info showing"),
         default=True)
-
-
+    galleria_lightbox = schema.Bool(
+        title=_(u'galleria_label_lightbox', default="Enable lightbox"),
+        description=_(u'galleria_lightbox',
+            default="enable lightbox when clicking on main image"),
+        default=True)
+        
 class GalleriaDisplayType(BaseDisplayType):
 
     name = u"galleria"
@@ -93,7 +97,8 @@ $(document).ready(function() {
         transition: "%(transition)s",
         autoplay: %(autoplay)s,
         clicknext: true,
-        showInfo: %(showInfo)s
+        showInfo: %(showInfo)s,
+        lightbox: %(lightbox)s,
     });
 });
 })(jQuery);
@@ -106,6 +111,7 @@ $(document).ready(function() {
         'transition': self.settings.galleria_transition,
         'autoplay': self.settings.timed and \
             str(self.settings.delay) or 'false',
-        'showInfo': jsbool(self.settings.galleria_auto_show_info)
+        'showInfo': jsbool(self.settings.galleria_auto_show_info),
+         'lightbox': jsbool(self.settings.galleria_lightbox),
     }
 GalleriaSettings = createSettingsFactory(GalleriaDisplayType.schema)
