@@ -46,7 +46,22 @@ class IGalleriaDisplaySettings(IBaseSettings):
         title=_(u'galleria_label_lightbox', default="Enable lightbox"),
         description=_(u'galleria_lightbox',
             default="enable lightbox when clicking on main image"),
-        default=True)
+        default=False)
+    galleria_carousel = schema.Bool(
+        title=_(u'galleria_carousel', default="Enable carousel"),
+        description=_(u'galleria_carousel',
+            default="enable carousel for thumbnails (you want this ON)"),
+        default=True)  
+    galleria_carousel_steps = schema.Int(
+        title=_(u'galleria_carousel_steps', default="Carousel steps"),
+        description=_(u'Carousel steps',
+            default="Defines how many 'steps' the carousel should take on each nav click."),
+        default=1)  
+    galleria_responsive = schema.Bool(
+        title=_(u'galleria_responsive', default="Resposive mode"),
+        description=_(u'galleria_responsive',
+            default="this setting is only useful if your theme is responsive"),
+        default=False)        
         
 class GalleriaDisplayType(BaseDisplayType):
 
@@ -99,6 +114,9 @@ $(document).ready(function() {
         clicknext: true,
         showInfo: %(showInfo)s,
         lightbox: %(lightbox)s,
+        carousel: %(carousel)s,
+        responsive: %(responsive)s,
+        carouselSteps: %(carousel_steps)s,
     });
 });
 })(jQuery);
@@ -112,6 +130,9 @@ $(document).ready(function() {
         'autoplay': self.settings.timed and \
             str(self.settings.delay) or 'false',
         'showInfo': jsbool(self.settings.galleria_auto_show_info),
-         'lightbox': jsbool(self.settings.galleria_lightbox),
+        'lightbox': jsbool(self.settings.galleria_lightbox),
+        'carousel': jsbool(self.settings.galleria_carousel),
+        'responsive': jsbool(self.settings.galleria_responsive),
+        'carousel_steps': self.settings.galleria_carousel_steps,
     }
 GalleriaSettings = createSettingsFactory(GalleriaDisplayType.schema)

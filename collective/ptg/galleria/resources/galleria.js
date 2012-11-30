@@ -1834,6 +1834,7 @@ Galleria = function() {
             });
 
             self.append( appends );
+            self.append('hallo');
 
             $( el.image ).append( lightbox.image.container );
 
@@ -2904,12 +2905,13 @@ Galleria.prototype = {
 
             // mix default extractions with the hrefs and config
             // and push it into the data array
+            // big has been changed by espenmn
             self._data.push( $.extend({
 
                 title:       img.attr('title') || '',
                 thumb:       img.attr('src'),
                 image:       img.attr('src'),
-                big:         img.attr('src'),
+                big:         img.attr('big'),
                 description: img.attr('alt') || '',
                 copyright:   (img.attr('copy')) ? '&copy;' + img.attr('copy') : '',
                 link:        img.attr('longdesc'),
