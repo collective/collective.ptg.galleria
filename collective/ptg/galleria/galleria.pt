@@ -11,5 +11,6 @@
         </a>
     </tal:images>
 </div>
-
+<script src="++resource++ptg.galleria/galleria.history.min.js" 
+        tal:condition="view/settings/galleria_history"></script>
 

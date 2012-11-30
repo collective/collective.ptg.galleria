@@ -61,7 +61,12 @@ class IGalleriaDisplaySettings(IBaseSettings):
         title=_(u'galleria_responsive', default="Resposive mode"),
         description=_(u'galleria_responsive',
             default="this setting is only useful if your theme is responsive"),
-        default=False)        
+        default=False)    
+    galleria_history = schema.Bool(
+        title=_(u'galleria_history', default="Enable history plugin"),
+        description=_(u'galleria_history',
+            default="Enables the browsers back button"),
+        default=False)    
         
 class GalleriaDisplayType(BaseDisplayType):
 
@@ -73,12 +78,14 @@ class GalleriaDisplayType(BaseDisplayType):
     js_theme_files = {
         'dark': '++resource++ptg.galleria/dark.js',
         'light': '++resource++ptg.galleria/light.js',
-        'classic': '++resource++ptg.galleria/classic.js'
+        'classic': '++resource++ptg.galleria/classic.js',
+        'fullscreen': '++resource++ptg.galleria/fullscreen.js'
     }
     css_theme_files = {
         'dark': '++resource++ptg.galleria/dark.css',
         'light': '++resource++ptg.galleria/light.css',
-        'classic': '++resource++ptg.galleria/classic.css'
+        'classic': '++resource++ptg.galleria/classic.css',
+        'fullscreen': '++resource++ptg.galleria/fullscreen.css'
     }
 
     def css(self):
@@ -107,7 +114,6 @@ class GalleriaDisplayType(BaseDisplayType):
 $(document).ready(function() {
     // Initialize Galleria
     $('#galleria').galleria({
-        theme: 'classic',
         transitionSpeed: %(duration)i,
         transition: "%(transition)s",
         autoplay: %(autoplay)s,
@@ -117,6 +123,7 @@ $(document).ready(function() {
         carousel: %(carousel)s,
         responsive: %(responsive)s,
         carouselSteps: %(carousel_steps)s,
+        trueFullscreen: true,
     });
 });
 })(jQuery);
