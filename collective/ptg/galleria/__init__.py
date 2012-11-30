@@ -15,6 +15,7 @@ class IGalleriaDisplaySettings(IBaseSettings):
         vocabulary=SimpleVocabulary([
             SimpleTerm('dark', 'dark', _(u"label_dark", default=u"Dark")),
             SimpleTerm('light', 'light', _(u"label_light", default=u"Light")),
+            SimpleTerm('fullscreen', 'fullscreen', _(u"label_fullscreen", default=u"Fullscreen")),
             SimpleTerm('classic', 'classic', _(u"label_classic",
                                                default=u"Classic"))
         ]))
@@ -42,6 +43,16 @@ class IGalleriaDisplaySettings(IBaseSettings):
         description=_(u'galleria_desc_auto_show_info',
             default="start gallery out with info showing"),
         default=True)
+    galleria_imagenav = schema.Bool(
+        title=_(u'galleria_label_imagenav', default="Enable Imagenav"),
+        description=_(u'galleria_imagenav',
+            default="enable the next and previous button"),
+        default=True) 
+    galleria_thumbnails = schema.Bool(
+        title=_(u'galleria_label_thumbnails', default="Enable Thumbnails"),
+        description=_(u'galleria_thumbnails',
+            default="enable the thumbnails at bottom"),
+        default=True)      
     galleria_lightbox = schema.Bool(
         title=_(u'galleria_label_lightbox', default="Enable lightbox"),
         description=_(u'galleria_lightbox',
@@ -124,6 +135,8 @@ $(document).ready(function() {
         responsive: %(responsive)s,
         carouselSteps: %(carousel_steps)s,
         trueFullscreen: true,
+        thumbnails: %(thumbnails)s,
+        showImagenav: %(imagenav)s,
     });
 });
 })(jQuery);
@@ -141,5 +154,7 @@ $(document).ready(function() {
         'carousel': jsbool(self.settings.galleria_carousel),
         'responsive': jsbool(self.settings.galleria_responsive),
         'carousel_steps': self.settings.galleria_carousel_steps,
+        'imagenav': jsbool(self.settings.galleria_imagenav),
+        'thumbnails': jsbool(self.settings.galleria_thumbnails),
     }
 GalleriaSettings = createSettingsFactory(GalleriaDisplayType.schema)
