@@ -4,7 +4,8 @@
  * Licensed under the MIT license.
  * Modified by emn 2012
  */
- 
+#galleria-loader{height:1px!important}
+
 .galleria-container {
     position: relative;
     overflow: hidden;

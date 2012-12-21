@@ -5,9 +5,11 @@
  * Modified by emn 2012.03.05
  */
  
+#galleria-loader{height:1px!important}
+
 .galleria-container {
     position: relative;
-    overflow: hidden;
+    z-index: 2;
 }
 .galleria-container img {
     -moz-user-select: none;

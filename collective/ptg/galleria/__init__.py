@@ -43,6 +43,20 @@ class IGalleriaDisplaySettings(IBaseSettings):
         description=_(u'galleria_desc_auto_show_info',
             default="start gallery out with info showing"),
         default=True)
+    galleria_height = schema.Int(
+        title=_(u'galleria_label_galleria_height', default="Height of gallery"),
+        description=_(u'galleria_galleria_height',
+            default="Height in pixels"),
+        default=300) 
+    galleria_overflow = schema.Choice(
+        title=_(u"galleria_overflow", default=u"Show overflow"),
+        default='hidden',
+        vocabulary=SimpleVocabulary([
+            SimpleTerm('visible', 'visible', _(u"label_visible",
+                default=u"Visible")),
+            SimpleTerm('hidden', 'hidden', _(u"label_hidden",
+                default=u"Hidden"))
+        ]))   
     galleria_imagenav = schema.Bool(
         title=_(u'galleria_label_imagenav', default="Enable Imagenav"),
         description=_(u'galleria_imagenav',
@@ -103,15 +117,10 @@ class GalleriaDisplayType(BaseDisplayType):
         return u"""
 <link rel="stylesheet" type="text/css"
     href="%(portal_url)s/%(css_file)s" />
-<style>
-#galleria{
-    height: %(height)ipx;
-}
-</style>
 """ % {
             'portal_url': self.portal_url,
-            'height': self.height + 60,
-            'css_file': self.css_theme_files[self.settings.galleria_theme]
+            'height': self.settings.galleria_height + 60,
+            'css_file': self.css_theme_files[self.settings.galleria_theme],
         }
 
     def javascript(self):
@@ -137,6 +146,7 @@ $(document).ready(function() {
         trueFullscreen: true,
         thumbnails: %(thumbnails)s,
         showImagenav: %(imagenav)s,
+        height: %(height)i,
     });
 });
 })(jQuery);
@@ -156,5 +166,6 @@ $(document).ready(function() {
         'carousel_steps': self.settings.galleria_carousel_steps,
         'imagenav': jsbool(self.settings.galleria_imagenav),
         'thumbnails': jsbool(self.settings.galleria_thumbnails),
+        'height': self.settings.galleria_height + 60,
     }
 GalleriaSettings = createSettingsFactory(GalleriaDisplayType.schema)

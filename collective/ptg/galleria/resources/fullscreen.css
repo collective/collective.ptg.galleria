@@ -5,11 +5,12 @@
  * Copyright (c) 2010, Aino
  * Licensed under the MIT license.
  */
- 
+#galleria-loader{height:1px!important}
+
 .galleria-container {
     position: relative;
-    overflow: hidden;
     background: #000;
+    z-index: 2;
 }
 .galleria-container img {
     -moz-user-select: none;
