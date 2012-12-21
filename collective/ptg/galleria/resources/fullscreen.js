@@ -12,9 +12,10 @@
 (function($) {
 
 Galleria.addTheme({
-    name: 'classic',
+    name: 'fullscreen',
     author: 'Galleria',
     defaults: {
+        trueFullscreen: true,
         transition: 'slide',
         thumbCrop:  'height',
 
