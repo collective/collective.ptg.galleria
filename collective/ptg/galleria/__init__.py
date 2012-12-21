@@ -157,6 +157,6 @@ $(document).ready(function() {
         'carousel_steps': self.settings.galleria_carousel_steps,
         'imagenav': jsbool(self.settings.galleria_imagenav),
         'thumbnails': jsbool(self.settings.galleria_thumbnails),
-        'height': self.settings.galleria_height + 60,
+        'height': self.settings.galleria_height,
     }
 GalleriaSettings = createSettingsFactory(GalleriaDisplayType.schema)
