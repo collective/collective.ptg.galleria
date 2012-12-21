@@ -9,7 +9,6 @@
 
 .galleria-container {
     position: relative;
-    z-index: 2;
 }
 .galleria-container img {
     -moz-user-select: none;

@@ -8,7 +8,6 @@
 
 .galleria-container {
     position: relative;
-    overflow: hidden;
 }
 .galleria-container img {
     -moz-user-select: none;
