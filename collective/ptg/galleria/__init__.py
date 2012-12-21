@@ -48,15 +48,6 @@ class IGalleriaDisplaySettings(IBaseSettings):
         description=_(u'galleria_galleria_height',
             default="Height in pixels"),
         default=300) 
-    galleria_overflow = schema.Choice(
-        title=_(u"galleria_overflow", default=u"Show overflow"),
-        default='hidden',
-        vocabulary=SimpleVocabulary([
-            SimpleTerm('visible', 'visible', _(u"label_visible",
-                default=u"Visible")),
-            SimpleTerm('hidden', 'hidden', _(u"label_hidden",
-                default=u"Hidden"))
-        ]))   
     galleria_imagenav = schema.Bool(
         title=_(u'galleria_label_imagenav', default="Enable Imagenav"),
         description=_(u'galleria_imagenav',
