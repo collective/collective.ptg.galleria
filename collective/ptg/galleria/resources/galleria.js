@@ -1834,7 +1834,6 @@ Galleria = function() {
             });
 
             self.append( appends );
-            self.append('hallo');
 
             $( el.image ).append( lightbox.image.container );
 
