@@ -1,6 +1,14 @@
 Changelog
 =========
 
+1.3.0 (unreleased)
+------------------
+
+- provide option to include a Download link that will
+  show up in the description.
+  [vangheem]
+
+
 1.2.1 (2012-11-29)
 ------------------
 

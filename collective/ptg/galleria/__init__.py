@@ -5,6 +5,7 @@ from collective.plonetruegallery.browser.views.display import BaseDisplayType
 from collective.plonetruegallery.browser.views.display import jsbool
 from collective.plonetruegallery.interfaces import IBaseSettings
 from zope import schema
+from plone.memoize.view import memoize
 
 _ = MessageFactory('collective.ptg.galleria')
 
@@ -82,8 +83,12 @@ class IGalleriaDisplaySettings(IBaseSettings):
         title=_(u'galleria_history', default="Enable history plugin"),
         description=_(u'galleria_history',
             default="Enables the browsers back button"),
-        default=False)    
-        
+        default=False)
+    galleria_include_download_link = schema.Bool(
+        title=_(u'galleria_download_url', default=u"Show download link"),
+        default=False)
+
+
 class GalleriaDisplayType(BaseDisplayType):
 
     name = u"galleria"
@@ -137,7 +142,7 @@ $(document).ready(function() {
         trueFullscreen: true,
         thumbnails: %(thumbnails)s,
         showImagenav: %(imagenav)s,
-        height: %(height)i,
+        height: %(height)i
     });
 });
 })(jQuery);
@@ -157,6 +162,18 @@ $(document).ready(function() {
         'carousel_steps': self.settings.galleria_carousel_steps,
         'imagenav': jsbool(self.settings.galleria_imagenav),
         'thumbnails': jsbool(self.settings.galleria_thumbnails),
-        'height': self.settings.galleria_height,
+        'height': self.settings.galleria_height
     }
+
+    @property
+    @memoize
+    def include_download_url(self):
+        return self.settings.galleria_include_download_link
+
+    def format_description(self, img):
+        if not self.include_download_url:
+            return img['description']
+        return """%s (<a class="download" href="%s">Download</a>)""" %(
+            img['description'],
+            img.get('download_url', img.get('image_url')))
 GalleriaSettings = createSettingsFactory(GalleriaDisplayType.schema)

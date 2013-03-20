@@ -69,7 +69,10 @@ Galleria.addTheme({
         
         // toggle info
         if ( options._toggleInfo === true ) {
-            info.bind( click, function() {
+            info.bind( click, function(e) {
+                if($(e.target).hasClass('download')){
+                    return;
+                }
                 info.toggle();
             });
         } else {
