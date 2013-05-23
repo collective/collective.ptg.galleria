@@ -125,7 +125,6 @@ class GalleriaDisplayType(BaseDisplayType):
 %(zoomsheet)s
 """ % {
             'portal_url': self.portal_url,
-            'height': self.settings.galleria_height + 60*(jsbool(self.settings.galleria_carousel)),
             'css_file': self.css_theme_files[self.settings.galleria_theme],
             'zoomsheet': zoomsheet,
         }
@@ -173,7 +172,7 @@ $(document).ready(function() {
         'carousel_steps': self.settings.galleria_carousel_steps,
         'imagenav': jsbool(self.settings.galleria_imagenav),
         'thumbnails': jsbool(self.settings.galleria_thumbnails),
-        'height': self.settings.galleria_height
+        'height': self.settings.galleria_height + 60*self.settings.galleria_carousel,     
     }
 
     @property
