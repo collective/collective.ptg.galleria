@@ -125,7 +125,7 @@ class GalleriaDisplayType(BaseDisplayType):
 %(zoomsheet)s
 """ % {
             'portal_url': self.portal_url,
-            'height': self.settings.galleria_height + 60,
+            'height': self.settings.galleria_height + 60*(jsbool(self.settings.galleria_carousel)),
             'css_file': self.css_theme_files[self.settings.galleria_theme],
             'zoomsheet': zoomsheet,
         }
