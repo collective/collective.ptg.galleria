@@ -2,15 +2,22 @@
 	0% { -webkit-transform: scale(1); }
 	15% { -webkit-transform: scale(1.25); }
 	30% { -webkit-transform:  scale(1.50); }
-	40% { -webkit-transform:  scale(2.00); }
+	40% { -webkit-transform:  scale(1.75); }
  
 }
 @-moz-keyframes fade {
 	0% { -moz-transform:  scale(1); }
 	15% {-moz-transform: scale(1.25); }
-	30% {-moz-transform: scale(2.00); }
-	40% {-moz-transform: scale(2.00); }
+	30% {-moz-transform: scale(1.50); }
+	40% {-moz-transform: scale(1.75); }
 }
 
 .galleria-stage div.galleria-image img { opacity:0; -webkit-animation:fade 24s linear infinite; -moz-animation:fade 20s linear infinite; }
  
+ .galleria-stage {
+    top: 0px;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    }
+        
