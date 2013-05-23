@@ -14,3 +14,5 @@ collective/ptg/galleria/.DS_Store
 .DS_Store
 
 *.mo
+
+collective/ptg/galleria/resources/galleria kopi.js

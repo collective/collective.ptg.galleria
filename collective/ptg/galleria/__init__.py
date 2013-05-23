@@ -74,6 +74,11 @@ class IGalleriaDisplaySettings(IBaseSettings):
         description=_(u'Carousel steps',
             default="Defines how many 'steps' the carousel should take on each nav click."),
         default=1)  
+    galleria_zoom = schema.Bool(
+        title=_(u'galleria_zoom', default="Enable CSS3 zooming (kind of ken burns effect) "),
+        description=_(u'galleria_zoom',
+            default="Enables ken burns zoom effect for modern browsers"),
+        default=False)   
     galleria_responsive = schema.Bool(
         title=_(u'galleria_responsive', default="Resposive mode"),
         description=_(u'galleria_responsive',
@@ -110,13 +115,19 @@ class GalleriaDisplayType(BaseDisplayType):
     }
 
     def css(self):
+        zoomsheet = ' '
+        if self.settings.galleria_zoom:
+            zoomsheet = """<link rel="stylesheet" type="text/css"
+                         href="++resource++ptg.galleria/zoom.css" />""" 
         return u"""
 <link rel="stylesheet" type="text/css"
     href="%(portal_url)s/%(css_file)s" />
+%(zoomsheet)s
 """ % {
             'portal_url': self.portal_url,
             'height': self.settings.galleria_height + 60,
             'css_file': self.css_theme_files[self.settings.galleria_theme],
+            'zoomsheet': zoomsheet,
         }
 
     def javascript(self):
