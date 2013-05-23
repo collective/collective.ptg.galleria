@@ -14,5 +14,5 @@
 	100% { opacity:0; } 
 }
 
-.galleria-stage div.galleria-image img { opacity:0; -webkit-animation:fade 24s linear infinite; -moz-animation:fade 12s linear infinite; }
+.galleria-stage div.galleria-image img { opacity:0; -webkit-animation:fade 24s linear infinite; -moz-animation:fade 20s linear infinite; }
  
