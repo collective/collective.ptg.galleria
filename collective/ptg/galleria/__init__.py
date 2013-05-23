@@ -187,4 +187,5 @@ $(document).ready(function() {
         return """%s (<a class="download" href="%s">Download</a>)""" %(
             img['description'],
             img.get('download_url', img.get('image_url')))
+            
 GalleriaSettings = createSettingsFactory(GalleriaDisplayType.schema)
