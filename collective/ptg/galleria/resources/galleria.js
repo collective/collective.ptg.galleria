@@ -331,7 +331,8 @@ var undef,
                         i;
 
                     // disable css3 animations in opera until stable
-                    if ( window.opera ) {
+                    // and disable css3 animation on IE 11 as "complete" event's callback is never called
+                    if ( window.opera || window.navigator.userAgent.match(/Trident.*rv\:11\./)) {
                         return false;
                     }
 

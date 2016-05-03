@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '1.3.0'
+version = '1.4.0.dev0'
 
 setup(name='collective.ptg.galleria',
       version=version,
@@ -12,6 +12,7 @@ setup(name='collective.ptg.galleria',
       # http://pypi.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[
         "Framework :: Plone",
+        "Framework :: Plone :: 4.3",
         "Programming Language :: Python",
         ],
       keywords='plone plonetruegallery addon',
