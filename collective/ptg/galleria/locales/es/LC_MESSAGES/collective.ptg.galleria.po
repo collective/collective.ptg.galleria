@@ -1,85 +1,168 @@
 # --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
 # Diego Rubert, 2009.
+# Enrique Pérez <eperez@yaco.es>, 2009.
+# Leonardo J. Caballero G. <leonardocaballero@gmail.com>, 2018.
 msgid ""
 msgstr ""
-"Project-Id-Version: collective.plonetruegallery\n"
-"POT-Creation-Date: 2012-07-10 13:07+0000\n"
-"PO-Revision-Date: 2009-05-19 16:17-0400\n"
-"Last-Translator: Enrique Pérez <eperez@yaco.es>\n"
-"Language-Team: Spanish <>\n"
+"Project-Id-Version: collective.ptg.galleria\n"
+"POT-Creation-Date: 2018-08-18 12:24+0000\n"
+"PO-Revision-Date: 2018-08-18 08:26-0400\n"
+"Last-Translator: Leonardo J. Caballero G. <leonardocaballero@gmail.com>\n"
+"Language-Team: Spanish Team\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Virtaal 0.7.1\n"
 "Language-Code: es\n"
 "Language-Name: Español\n"
 "Preferred-Encodings: utf-8 latin1\n"
-"Domain: collective.plonetruegallery\n"
-"X-Generator: Lokalize 0.3\n"
+"Domain: collective.ptg.galleria\n"
+"X-Is-Fallback-For: es-ar es-bo es-cl es-co es-cr es-do es-ec es-es es-sv es-gt es-hn es-mx es-ni es-pa es-py es-pe es-pr es-us es-uy es-ve\n"
+
+#. Default: "Defines how many 'steps' the carousel should take on each nav click."
+#: ./__init__.py:74
+msgid "Carousel steps"
+msgstr "Define cuántos 'pasos' debe tomar el carrusel en cada clic de navegación."
+
+#. Default: "Enable carousel"
+#: ./__init__.py:68
+msgid "galleria_carousel"
+msgstr "Habilitar carrusel"
+
+#. Default: "Carousel steps"
+#: ./__init__.py:73
+msgid "galleria_carousel_steps"
+msgstr "Pasos del carrusel"
 
 #. Default: "start gallery out with info showing"
-#: ./__init__.py:42
+#: ./__init__.py:44
 msgid "galleria_desc_auto_show_info"
-msgstr ""
+msgstr "comience la galería con información que muestre"
+
+#. Default: "Show download link"
+#: ./__init__.py:93
+msgid "galleria_download_url"
+msgstr "Mostrar enlace de descarga"
+
+#. Default: "Height in pixels"
+#: ./__init__.py:49
+msgid "galleria_galleria_height"
+msgstr "Alto en píxeles"
+
+#. Default: "Enable history plugin"
+#: ./__init__.py:88
+msgid "galleria_history"
+msgstr "Habilitar el complemento de historial"
+
+#. Default: "enable the next and previous button"
+#: ./__init__.py:54
+msgid "galleria_imagenav"
+msgstr "habilitar el botón siguiente y anterior"
 
 #. Default: "Auto show info"
-#: ./__init__.py:41
+#: ./__init__.py:43
 msgid "galleria_label_auto_show_info"
-msgstr ""
+msgstr "Auto mostrar información"
+
+#. Default: "Height of gallery"
+#: ./__init__.py:48
+msgid "galleria_label_galleria_height"
+msgstr "Alto de la galería"
+
+#. Default: "Enable Imagenav"
+#: ./__init__.py:53
+msgid "galleria_label_imagenav"
+msgstr "Habilitar navegación de imagen"
+
+#. Default: "Enable lightbox"
+#: ./__init__.py:63
+msgid "galleria_label_lightbox"
+msgstr "Habilitar lightbox"
+
+#. Default: "Enable Thumbnails"
+#: ./__init__.py:58
+msgid "galleria_label_thumbnails"
+msgstr "Habilitar miniaturas"
+
+#. Default: "enable lightbox when clicking on main image"
+#: ./__init__.py:64
+msgid "galleria_lightbox"
+msgstr "habilitar lightbox al hacer clic en la imagen principal"
+
+#. Default: "Resposive mode"
+#: ./__init__.py:83
+msgid "galleria_responsive"
+msgstr "Modo Resposive"
 
 #. Default: "Theme"
-#: ./__init__.py:13
+#: ./__init__.py:14
 msgid "galleria_theme_title"
-msgstr ""
+msgstr "Tema"
+
+#. Default: "enable the thumbnails at bottom"
+#: ./__init__.py:59
+msgid "galleria_thumbnails"
+msgstr "habilitar las miniaturas en la parte inferior"
 
 #. Default: "Transition"
-#: ./__init__.py:22
+#: ./__init__.py:24
 msgid "galleria_transition"
-msgstr ""
+msgstr "Transición"
+
+#. Default: "Enable CSS3 zooming (kind of ken burns effect) "
+#: ./__init__.py:78
+msgid "galleria_zoom"
+msgstr "Habilitar el zoom CSS3 (tipo de efecto de grabación de ken)"
 
 #. Default: "Classic"
-#: ./__init__.py:18
+#: ./__init__.py:20
 msgid "label_classic"
-msgstr ""
+msgstr "Clasico"
 
 #. Default: "Dark"
-#: ./__init__.py:16
+#: ./__init__.py:17
 msgid "label_dark"
-msgstr ""
+msgstr "Oscuro"
 
 #. Default: "Fade - crossfade betweens images"
-#: ./__init__.py:28
+#: ./__init__.py:30
 #, fuzzy
 msgid "label_fade"
-msgstr "Desvanecer"
+msgstr "Desvanece - fundido cruzado entre imágenes"
 
 #. Default: "Fade Slide - fade between images and slide slightly at the same time"
-#: ./__init__.py:25
+#: ./__init__.py:27
 msgid "label_fadeslide"
-msgstr ""
+msgstr "Deslizamiento desvanecido: se desvanece entre las imágenes y se desliza ligeramente al mismo tiempo"
 
 #. Default: "Flash - fades into background color between images"
-#: ./__init__.py:30
+#: ./__init__.py:32
 msgid "label_flash"
-msgstr ""
+msgstr "Flash: se desvanece en el color de fondo entre las imágenes"
+
+#. Default: "Fullscreen"
+#: ./__init__.py:19
+msgid "label_fullscreen"
+msgstr "Pantalla completa"
 
 #. Default: "Galleria"
-#: ./__init__.py:51
+#: ./__init__.py:101
 msgid "label_galleria_display_type"
-msgstr ""
+msgstr "Galleria"
 
 #. Default: "Light"
-#: ./__init__.py:17
+#: ./__init__.py:18
 msgid "label_light"
 msgstr ""
 
 #. Default: "Pulse - quickly removes the image into background color, then fades the next image"
-#: ./__init__.py:33
+#: ./__init__.py:35
 msgid "label_pulse"
-msgstr ""
+msgstr "Pulso: elimina rápidamente la imagen en color de fondo, luego se desvanece en la siguiente imagen"
 
 #. Default: "Slide - slides the images depending on image position"
-#: ./__init__.py:36
+#: ./__init__.py:38
 msgid "label_slide"
-msgstr ""
-
+msgstr "Diapositiva: desliza las imágenes según la posición de la imagen"
