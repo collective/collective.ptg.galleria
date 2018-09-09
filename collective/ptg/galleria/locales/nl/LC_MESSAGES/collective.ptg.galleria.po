@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: 1.1\n"
-"POT-Creation-Date: 2012-07-10 13:07+0000\n"
+"Project-Id-Version: collective.ptg.galleria 1.1\n"
+"POT-Creation-Date: 2018-08-18 12:24+0000\n"
 "PO-Revision-Date: 2010-03-18 15:01+0100\n"
 "Last-Translator: Martijn Schenk <martijn.schenk@fourdigits.nl>\n"
 "Language-Team: Rob Gietema <rob@fourdigits.nl>\n"
@@ -12,71 +12,150 @@ msgstr ""
 "Language-Code: nl\n"
 "Language-Name: Dutch\n"
 "Preferred-Encodings: utf-8 latin1\n"
-"Domain: collective.plonetruegallery\n"
+"Domain: collective.ptg.galleria\n"
+
+#. Default: "Defines how many 'steps' the carousel should take on each nav click."
+#: ./__init__.py:74
+msgid "Carousel steps"
+msgstr ""
+
+#. Default: "Enable carousel"
+#: ./__init__.py:68
+msgid "galleria_carousel"
+msgstr ""
+
+#. Default: "Carousel steps"
+#: ./__init__.py:73
+msgid "galleria_carousel_steps"
+msgstr ""
 
 #. Default: "start gallery out with info showing"
-#: ./__init__.py:42
+#: ./__init__.py:44
 msgid "galleria_desc_auto_show_info"
 msgstr ""
 
+#. Default: "Show download link"
+#: ./__init__.py:93
+msgid "galleria_download_url"
+msgstr ""
+
+#. Default: "Height in pixels"
+#: ./__init__.py:49
+msgid "galleria_galleria_height"
+msgstr ""
+
+#. Default: "Enable history plugin"
+#: ./__init__.py:88
+msgid "galleria_history"
+msgstr ""
+
+#. Default: "enable the next and previous button"
+#: ./__init__.py:54
+msgid "galleria_imagenav"
+msgstr ""
+
 #. Default: "Auto show info"
-#: ./__init__.py:41
+#: ./__init__.py:43
 msgid "galleria_label_auto_show_info"
 msgstr ""
 
+#. Default: "Height of gallery"
+#: ./__init__.py:48
+msgid "galleria_label_galleria_height"
+msgstr ""
+
+#. Default: "Enable Imagenav"
+#: ./__init__.py:53
+msgid "galleria_label_imagenav"
+msgstr ""
+
+#. Default: "Enable lightbox"
+#: ./__init__.py:63
+msgid "galleria_label_lightbox"
+msgstr ""
+
+#. Default: "Enable Thumbnails"
+#: ./__init__.py:58
+msgid "galleria_label_thumbnails"
+msgstr ""
+
+#. Default: "enable lightbox when clicking on main image"
+#: ./__init__.py:64
+msgid "galleria_lightbox"
+msgstr ""
+
+#. Default: "Resposive mode"
+#: ./__init__.py:83
+msgid "galleria_responsive"
+msgstr ""
+
 #. Default: "Theme"
-#: ./__init__.py:13
+#: ./__init__.py:14
 msgid "galleria_theme_title"
 msgstr ""
 
+#. Default: "enable the thumbnails at bottom"
+#: ./__init__.py:59
+msgid "galleria_thumbnails"
+msgstr ""
+
 #. Default: "Transition"
-#: ./__init__.py:22
+#: ./__init__.py:24
 msgid "galleria_transition"
 msgstr ""
 
+#. Default: "Enable CSS3 zooming (kind of ken burns effect) "
+#: ./__init__.py:78
+msgid "galleria_zoom"
+msgstr ""
+
 #. Default: "Classic"
-#: ./__init__.py:18
+#: ./__init__.py:20
 msgid "label_classic"
 msgstr ""
 
 #. Default: "Dark"
-#: ./__init__.py:16
+#: ./__init__.py:17
 msgid "label_dark"
 msgstr ""
 
 #. Default: "Fade - crossfade betweens images"
-#: ./__init__.py:28
+#: ./__init__.py:30
 #, fuzzy
 msgid "label_fade"
 msgstr "Fade"
 
 #. Default: "Fade Slide - fade between images and slide slightly at the same time"
-#: ./__init__.py:25
+#: ./__init__.py:27
 msgid "label_fadeslide"
 msgstr ""
 
 #. Default: "Flash - fades into background color between images"
-#: ./__init__.py:30
+#: ./__init__.py:32
 msgid "label_flash"
 msgstr ""
 
+#. Default: "Fullscreen"
+#: ./__init__.py:19
+msgid "label_fullscreen"
+msgstr ""
+
 #. Default: "Galleria"
-#: ./__init__.py:51
+#: ./__init__.py:101
 msgid "label_galleria_display_type"
 msgstr ""
 
 #. Default: "Light"
-#: ./__init__.py:17
+#: ./__init__.py:18
 msgid "label_light"
 msgstr ""
 
 #. Default: "Pulse - quickly removes the image into background color, then fades the next image"
-#: ./__init__.py:33
+#: ./__init__.py:35
 msgid "label_pulse"
 msgstr ""
 
 #. Default: "Slide - slides the images depending on image position"
-#: ./__init__.py:36
+#: ./__init__.py:38
 msgid "label_slide"
 msgstr ""
-

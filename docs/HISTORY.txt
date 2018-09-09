@@ -5,6 +5,7 @@ Changelog
 1.4.0 (unrelease)
 ------------------
 
+- updated gettext files [macagua]
 - added fake ken burns effec [espen_mn]
 - changed height if carousel is not present [espen_mn]
 - disabled CSS transition on IE 11 as it freeze animation completion event
