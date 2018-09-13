@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: collective.ptg.galleria\n"
 "POT-Creation-Date: 2018-08-18 12:24+0000\n"
-"PO-Revision-Date: 2018-08-18 08:26-0400\n"
+"PO-Revision-Date: 2018-09-09 09:11-0400\n"
 "Last-Translator: Leonardo J. Caballero G. <leonardocaballero@gmail.com>\n"
 "Language-Team: Spanish Team\n"
 "Language: es\n"
@@ -24,7 +24,8 @@ msgstr ""
 #. Default: "Defines how many 'steps' the carousel should take on each nav click."
 #: ./__init__.py:74
 msgid "Carousel steps"
-msgstr "Define cuántos 'pasos' debe tomar el carrusel en cada clic de navegación."
+msgstr ""
+"Define cuántos 'pasos' debe tomar el carrusel en cada clic de navegación."
 
 #. Default: "Enable carousel"
 #: ./__init__.py:68
@@ -94,7 +95,7 @@ msgstr "habilitar lightbox al hacer clic en la imagen principal"
 #. Default: "Resposive mode"
 #: ./__init__.py:83
 msgid "galleria_responsive"
-msgstr "Modo Resposive"
+msgstr "Modo Responsivo"
 
 #. Default: "Theme"
 #: ./__init__.py:14
@@ -128,14 +129,15 @@ msgstr "Oscuro"
 
 #. Default: "Fade - crossfade betweens images"
 #: ./__init__.py:30
-#, fuzzy
 msgid "label_fade"
-msgstr "Desvanece - fundido cruzado entre imágenes"
+msgstr "Fundido - fundido cruzado entre imágenes"
 
 #. Default: "Fade Slide - fade between images and slide slightly at the same time"
 #: ./__init__.py:27
 msgid "label_fadeslide"
-msgstr "Deslizamiento desvanecido: se desvanece entre las imágenes y se desliza ligeramente al mismo tiempo"
+msgstr ""
+"Deslizamiento desvanecido: se desvanece entre las imágenes y se desliza "
+"ligeramente al mismo tiempo"
 
 #. Default: "Flash - fades into background color between images"
 #: ./__init__.py:32
@@ -155,12 +157,14 @@ msgstr "Galleria"
 #. Default: "Light"
 #: ./__init__.py:18
 msgid "label_light"
-msgstr ""
+msgstr "Ligero"
 
 #. Default: "Pulse - quickly removes the image into background color, then fades the next image"
 #: ./__init__.py:35
 msgid "label_pulse"
-msgstr "Pulso: elimina rápidamente la imagen en color de fondo, luego se desvanece en la siguiente imagen"
+msgstr ""
+"Pulso: elimina rápidamente la imagen en color de fondo, luego se desvanece "
+"en la siguiente imagen"
 
 #. Default: "Slide - slides the images depending on image position"
 #: ./__init__.py:38
