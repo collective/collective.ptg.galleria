@@ -5,6 +5,8 @@ Changelog
 1.4.0 (unrelease)
 ------------------
 
+- added more keywords and strings classifiers items and updated others items 
+  for this package [macagua]
 - updated spanish translation [macagua]
 - updated gettext files [macagua]
 - added fake ken burns effec [espen_mn]
