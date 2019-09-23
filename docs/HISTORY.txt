@@ -5,6 +5,7 @@ Changelog
 1.4.0 (unrelease)
 ------------------
 
+- Fix classes on play / pause button (#5) [laulaz]
 - added more keywords and strings classifiers items and updated others items 
   for this package [macagua]
 - updated spanish translation [macagua]
